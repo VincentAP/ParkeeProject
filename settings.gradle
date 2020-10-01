@@ -1,0 +1,4 @@
+include ':login'
+include ':assets'
+include ':app'
+rootProject.name = "Parkee Project"
