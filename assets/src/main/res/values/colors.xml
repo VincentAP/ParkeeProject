@@ -14,4 +14,10 @@
     <color name="transferWiseJungleMist">#c1c2c2</color>
     <color name="transferWiseBlack">#000000</color>
     <color name="transferWiseWhite">#FFFFFF</color>
+    <color name="transferWisePersianBlue">#192BC2</color>
+    <color name="transferWiseNavyBlue">#03037A</color>
+    <color name="transferWiseViking">#5dbcd2</color>
+    <color name="transferWiseErrorRed">#FFCDD2</color>
+    <color name="transferWiseTransparentWhite">#00FFFFFF</color>
+    <color name="transferWiseRed">#B71C1C</color>
 </resources>

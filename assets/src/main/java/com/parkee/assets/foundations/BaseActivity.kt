@@ -8,6 +8,7 @@ import androidx.annotation.DrawableRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.parkee.assets.extensions.setup
+import com.parkee.assets.repo.Repo
 import de.hdodenhof.circleimageview.CircleImageView
 
 /**
@@ -77,5 +78,10 @@ open class BaseActivity : AppCompatActivity() {
             }
             if (backPressedHandler) fm.popBackStackImmediate()
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Repo.disposable?.clear()
     }
 }

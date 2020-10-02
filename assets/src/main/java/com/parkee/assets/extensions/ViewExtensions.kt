@@ -1,6 +1,7 @@
 package com.parkee.assets.extensions
 
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.Toolbar
@@ -53,4 +54,11 @@ fun Toolbar.setup(
         this.setNavigationIcon(it)
         this.setNavigationOnClickListener { listener.invoke() }
     }
+}
+
+fun View.animateClicked() {
+    val animClicked = AnimationUtils.loadAnimation(context, R.anim.zoom_in)
+    val animClickedOut = AnimationUtils.loadAnimation(context, R.anim.zoom_out)
+    this.startAnimation(animClicked)
+    this.startAnimation(animClickedOut)
 }
