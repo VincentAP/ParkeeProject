@@ -3,7 +3,7 @@ package com.parkee.assets.foundations
 import android.os.Bundle
 import com.parkee.assets.R
 
-class BaseFullScreenDialogFragment : BaseDialogFragment() {
+open class BaseFullScreenDialogFragment : BaseDialogFragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
