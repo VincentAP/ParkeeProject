@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeTransferHistoryItemWrapper"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerHeaderSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeShimmerHeaderSection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textHeaderShimmer"
+                android:layout_width="130dp"
+                android:layout_height="22dp"
+                android:background="@drawable/shimmer_short_text"
+                android:layout_marginBottom="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/transferWiseWhiteGrey"
+                android:layout_below="@+id/textHeaderShimmer"/>
+        </RelativeLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shimmerHeaderSection">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeShimmerWrapper1">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage2">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper2"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName2"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus2"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail2">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper2"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom2"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo2"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency2"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeShimmerWrapper2">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow3"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage3">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper3"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName3"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus3"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail3">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper3"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom3"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo3"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency3"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeShimmerWrapper3">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow4"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage4">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper4"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName4"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus4"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail4">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper4"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom4"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo4"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency4"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeShimmerWrapper4">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow5"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage5">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper5"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName5"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus5"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail5">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper5"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom5"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo5"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency5"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeShimmerWrapper6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeShimmerWrapper5">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerImage6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrow6"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/shimmer_image"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"/>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerRecipientDetail6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/shimmerImage6">
+
+            <LinearLayout
+                android:id="@+id/linearLeftTransferDetailWrapper6"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textRecipientName6"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"
+                    android:layout_marginBottom="3dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textTransferStatus6"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmerCurrency6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/shimmerRecipientDetail6">
+
+            <LinearLayout
+                android:id="@+id/linearRightTransferDetailWrapper6"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_gravity="end">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyFrom6"
+                    android:layout_width="130dp"
+                    android:layout_height="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/shimmer_short_text"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textCurrencyTo6"
+                    android:layout_width="90dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/shimmer_short_text"/>
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/transferWiseWhiteGrey"
+            android:layout_below="@+id/shimmerCurrency6"/>
+    </RelativeLayout>
+</RelativeLayout>

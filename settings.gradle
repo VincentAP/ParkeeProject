@@ -1,3 +1,5 @@
+include ':homepage'
+include ':sendmoney'
 include ':login'
 include ':assets'
 include ':app'

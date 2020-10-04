@@ -20,4 +20,9 @@
     <color name="transferWiseErrorRed">#FFCDD2</color>
     <color name="transferWiseTransparentWhite">#00FFFFFF</color>
     <color name="transferWiseRed">#B71C1C</color>
+    <color name="transferWiseGreen">#2ed06e</color>
+    <color name="transferWiseToolbarColor">#325182</color>
+    <color name="transferWiseAccountBlue">#28436c</color>
+    <color name="transferWiseHistoryTitleGrey">#aeacac</color>
+    <color name="transferWiseHistorySubtitleGrey">#a8aaac</color>
 </resources>

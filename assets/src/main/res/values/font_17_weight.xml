@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView17.White.Regular" parent="TextView17.White">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.White.SemiBold" parent="TextView17.White">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.White.Bold" parent="TextView17.White">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
+    <style name="TextView17.Black.Regular" parent="TextView17.Black">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.Black.SemiBold" parent="TextView17.Black">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.Black.Bold" parent="TextView17.Black">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
+    <style name="TextView17.Grey61.Regular" parent="TextView17.Grey61">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.Grey61.SemiBold" parent="TextView17.Grey61">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.Grey61.Bold" parent="TextView17.Grey61">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
+    <style name="TextView17.Grey.Regular" parent="TextView17.Grey">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.Grey.SemiBold" parent="TextView17.Grey">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.Grey.Bold" parent="TextView17.Grey">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
+    <style name="TextView17.LighterGrey.Regular" parent="TextView17.LighterGrey">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.LighterGrey.SemiBold" parent="TextView17.LighterGrey">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.LighterGrey.Bold" parent="TextView17.LighterGrey">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
+</resources>

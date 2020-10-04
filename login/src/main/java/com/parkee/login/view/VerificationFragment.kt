@@ -1,5 +1,6 @@
 package com.parkee.login.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -7,14 +8,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatEditText
+import androidx.core.content.ContextCompat
 import com.parkee.assets.extensions.animateClicked
+import com.parkee.assets.extensions.fromJsonToList
 import com.parkee.assets.foundations.BaseFullScreenDialogFragment
+import com.parkee.assets.model.User
+import com.parkee.homepage.view.activity.HomepageActivity
 import com.parkee.login.databinding.VerificationFragmentBinding
 
 class VerificationFragment: BaseFullScreenDialogFragment() {
 
     private var binding: VerificationFragmentBinding? = null
-    private val phoneNumber by extra<String>(PHONE_NUMBER)
+    private val item by extraNotNull(ITEM, "{}")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,7 +29,8 @@ class VerificationFragment: BaseFullScreenDialogFragment() {
         binding = VerificationFragmentBinding.inflate(inflater, container, false)
 
         binding?.apply {
-            phoneNumber?.let {
+            val itemList = item.fromJsonToList<User>()
+            itemList?.get(0)?.details?.phoneNumber?.let {
                 val phoneNumberLength = it.length - 4
                 var textStar = ""
                 for (i in 0 until phoneNumberLength) textStar += "*"
@@ -41,6 +47,17 @@ class VerificationFragment: BaseFullScreenDialogFragment() {
 
             buttonDone.setOnClickListener {
                 it.animateClicked()
+                binding?.apply {
+                    context?.let { cont ->
+                        relativeDoneButtonWrapper.setBackgroundColor(
+                            ContextCompat.getColor(
+                                cont,
+                                com.parkee.assets.R.color.transferWiseGrey61
+                            )
+                        )
+                    }
+                    progressIndicator.visibility = View.VISIBLE
+                }
                 checkIntegrity()
             }
 
@@ -87,7 +104,21 @@ class VerificationFragment: BaseFullScreenDialogFragment() {
                 edit4.text?.toString() == OTP  &&
                 edit5.text?.toString() == OTP  &&
                 edit6.text?.toString() == OTP ) {
-                showShortToast("Good")
+                binding?.apply {
+                    context?.let { cont ->
+                        relativeDoneButtonWrapper.setBackgroundColor(
+                            ContextCompat.getColor(
+                                cont,
+                                com.parkee.assets.R.color.transferWiseBlue
+                            )
+                        )
+                    }
+                    progressIndicator.visibility = View.GONE
+                }
+                Intent(context, HomepageActivity::class.java).also {
+                    it.putExtra("ITEM", item)
+                    startActivity(it)
+                }
             } else showShortToast("Please enter the right OTP code")
         }
     }
@@ -101,13 +132,13 @@ class VerificationFragment: BaseFullScreenDialogFragment() {
         @JvmStatic
         val TAG: String = VerificationFragment::class.java.name
         private const val OTP = "1"
-        private const val PHONE_NUMBER = "PHONE_NUMBER"
+        private const val ITEM = "ITEM"
 
         @JvmStatic
-        fun newInstance(phoneNumber: String?) =
+        fun newInstance(item: String?) =
             VerificationFragment().apply {
                 arguments = Bundle().apply {
-                    putString(PHONE_NUMBER, phoneNumber)
+                    putString(ITEM, item)
                 }
             }
     }
