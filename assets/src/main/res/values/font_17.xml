@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="TextView17.White" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseWhite</item>
+    </style>
+
+    <style name="TextView17.Black" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseBlack</item>
+    </style>
+
+    <style name="TextView17.Grey61" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseGrey61</item>
+    </style>
+
+    <style name="TextView17.Grey" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseGrey</item>
+    </style>
+
+    <style name="TextView17.LighterGrey" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseLighterGrey</item>
+    </style>
+
+</resources>

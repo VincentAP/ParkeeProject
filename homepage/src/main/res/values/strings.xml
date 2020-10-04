@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home_nav">Home</string>
+    <string name="card_nav">Card</string>
+    <string name="recipients_nav">Recipients</string>
+    <string name="send_nav">Send</string>
+
+    <string name="currency_type">%1$s balance</string>
+    <string name="empty_history_message">This is where you\'ll see your activity and transactions.</string>
+    <string name="of">of</string>
+</resources>

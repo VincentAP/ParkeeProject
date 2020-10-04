@@ -6,8 +6,19 @@ import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.parkee.assets.R
 import de.hdodenhof.circleimageview.CircleImageView
+
+fun CircleImageView.loadImageFromLink(
+    imageUrl: String
+) {
+    Glide
+        .with(context)
+        .asBitmap()
+        .load(imageUrl)
+        .into(this)
+}
 
 fun Toolbar.setup(
     title: String,

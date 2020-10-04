@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.Observer
 import com.parkee.assets.extensions.animateClicked
+import com.parkee.assets.extensions.toJson
 import com.parkee.assets.foundations.BaseFullScreenDialogFragment
 import com.parkee.assets.model.User
 import com.parkee.assets.repo.*
@@ -69,10 +70,11 @@ class LoginFragment: BaseFullScreenDialogFragment() {
 
         binding?.buttonLogin?.setOnClickListener {
             binding?.buttonLogin?.animateClicked()
-            if (binding?.editEmail?.text?.toString() != CREDENTIALS_EMAIL &&
-                binding?.editPassword?.text?.toString() != CREDENTIALS_PASSWORD) {
-                binding?.layoutCredentialsError?.root?.visibility = View.VISIBLE
-            } else loginViewModel.requestLogin()
+            if (binding?.editEmail?.text?.toString() == CREDENTIALS_EMAIL &&
+                binding?.editPassword?.text?.toString() == CREDENTIALS_PASSWORD) {
+                binding?.layoutCredentialsError?.root?.visibility = View.GONE
+                loginViewModel.requestLogin()
+            } else binding?.layoutCredentialsError?.root?.visibility = View.VISIBLE
         }
 
         binding?.layoutCredentialsError?.imageClose?.setOnClickListener {
@@ -107,7 +109,7 @@ class LoginFragment: BaseFullScreenDialogFragment() {
                 Status.SUCCESS -> {
                     activity?.supportFragmentManager?.let {
                         VerificationFragment.newInstance(
-                            response?.get(0)?.details?.phoneNumber
+                            response?.toJson()
                         )
                             .show(it, VerificationFragment.TAG)
                     }

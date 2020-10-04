@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearBottomNavigationWrapper"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:baselineAligned="false"
+    android:paddingStart="50dp"
+    android:paddingEnd="50dp">
+
+    <LinearLayout
+        android:id="@+id/linearHomeNavWrapper"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:focusable="false">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageHome"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_selected_home"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseBlue"
+            android:fontFamily="@font/tw_averta_regular"
+            android:textSize="12sp"
+            android:text="@string/home_nav"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearCardNavWrapper"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:focusable="false">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageCard"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_unselected_card"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseBlackBlue"
+            android:fontFamily="@font/tw_averta_regular"
+            android:textSize="12sp"
+            android:text="@string/card_nav"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearRecipientsNavWrapper"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:focusable="false">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageRecipients"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_unselected_recipients"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRecipients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseBlackBlue"
+            android:fontFamily="@font/tw_averta_regular"
+            android:textSize="12sp"
+            android:text="@string/recipients_nav"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearSendNavWrapper"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:focusable="false">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageSend"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            app:srcCompat="@drawable/ic_send"
+            android:layout_marginBottom="2dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseBlackBlue"
+            android:fontFamily="@font/tw_averta_regular"
+            android:textSize="12sp"
+            android:text="@string/send_nav"/>
+    </LinearLayout>
+</LinearLayout>
