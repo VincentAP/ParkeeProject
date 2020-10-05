@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/frameSendMoneyInternationalWrapper"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/transferWiseWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:id="@+id/scrollWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="25dp">
+
+        <LinearLayout
+            android:id="@+id/linearItemWrapper"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <include
+                android:id="@+id/layoutInsertSourceItem"
+                layout="@layout/insert_currency_value_item"/>
+
+            <include
+                android:id="@+id/layoutExpanding"
+                layout="@layout/expanding_send_money_item"/>
+
+            <include
+                android:id="@+id/layoutInsertRecipientItem"
+                layout="@layout/insert_target_value_item"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textArrivedTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/transferWiseGrey"
+                android:text="@string/should_arrive"/>
+
+            <include
+                android:id="@+id/layoutCNYWarningItem"
+                layout="@layout/transfer_to_cny_wraning_item"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonContinue"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:background="@color/transferWiseGreen"
+                android:textColor="@color/transferWiseWhite"
+                android:text="@string/continue_transfer"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/transferWiseBlue"
+            android:src="@drawable/ic_help"
+            app:borderWidth="0dp"
+            app:fabSize="normal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</FrameLayout>

@@ -9,6 +9,7 @@ import com.parkee.assets.foundations.BaseActivity
 import com.parkee.homepage.R
 import com.parkee.homepage.databinding.HomepageActivityBinding
 import com.parkee.homepage.navigator.HomepageNavigator
+import com.parkee.sendmoney.view.SendMoneyLandingFragment
 import kotlinx.android.synthetic.main.homepage_activity.*
 
 class HomepageActivity: BaseActivity() {
@@ -136,7 +137,8 @@ class HomepageActivity: BaseActivity() {
 
             }
             SEND_FRAGMENT -> {
-
+                SendMoneyLandingFragment.newInstance()
+                    .show(supportFragmentManager, SendMoneyLandingFragment.TAG)
             }
         }
     }

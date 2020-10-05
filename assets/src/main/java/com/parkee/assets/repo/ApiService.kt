@@ -40,4 +40,12 @@ interface ApiService {
         @Header("Authorization") authHeader: String,
         @Path("accountId") accountId: Int
     ): Observable<RecipientAccountInfo>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v1/quotes")
+    fun getQuote(
+
+    ): Single<List<Quote>>
 }

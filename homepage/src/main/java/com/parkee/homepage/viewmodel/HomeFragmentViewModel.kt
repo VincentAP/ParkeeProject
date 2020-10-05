@@ -206,12 +206,19 @@ class HomeFragmentViewModelImpl: HomeFragmentViewModel, ViewModel() {
                         })
                 )
                 responseWaiting.forEach {
+                    var currencyFrom = "${it.sourceValue} ${it.sourceCurrency}"
+                    var isCurrencyFromHasValue = true
+                    if (it.sourceValue == 0.0) {
+                        currencyFrom = "${it.sourceCurrency} to"
+                        isCurrencyFromHasValue = false
+                    }
                     item.add(
                         TransferHistoryItem(
                             it.accountHolderName,
                             getTransferStatus(it),
-                            "${it.sourceValue} ${it.sourceCurrency}",
-                            "${it.targetValue} ${it.targetCurrency}"
+                            currencyFrom,
+                            "${it.targetValue} ${it.targetCurrency}",
+                            isCurrencyFromHasValue = isCurrencyFromHasValue
                         )
                     )
                 }

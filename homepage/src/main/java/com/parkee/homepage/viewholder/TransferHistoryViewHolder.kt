@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import com.airbnb.paris.extensions.style
 import com.parkee.assets.foundations.BaseItem
 import com.parkee.assets.foundations.BaseViewHolder
 import com.parkee.assets.foundations.ViewHolderFactory
@@ -15,7 +16,8 @@ data class TransferHistoryItem (
     val transferStatus: String,
     val currencyFrom: String,
     val currencyTo: String,
-    val isHistory: Boolean = false
+    val isHistory: Boolean = false,
+    val isCurrencyFromHasValue: Boolean = true
 ): BaseItem {
     override fun layoutId(): Int = R.layout.transfer_history_item
     override fun id(): Long = currencyTo.hashCode().toLong()
@@ -45,6 +47,7 @@ class TransferHistoryViewHolder(private val itemBinding: TransferHistoryItemBind
             }
             textCurrencyFrom.apply {
                 if (item.isHistory) setTextColor(titleHistoryColor)
+                if (!item.isCurrencyFromHasValue) style(com.parkee.assets.R.style.TextView17_Grey61_Regular)
                 text = item.currencyFrom
             }
             textCurrencyTo.apply {

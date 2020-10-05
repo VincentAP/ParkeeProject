@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="you_send">You send</string>
+    <string name="source_value">1,000</string>
+    <string name="gbp">GBP</string>
+    <string name="current_balance">You have <u><font fgcolor='#09bcfa'>%1$s</font></u> in your balance</string>
+    <string name="recipient_gets">Recipient gets</string>
+    <string name="fee">fee</string>
+    <string name="amount_we_convert">Amount we\'ll convert</string>
+    <string name="guaranteed_rate"><u>Guaranteed rate</u> (24 hrs)</string>
+    <string name="should_arrive">Should arrive <b>%1$s</b></string>
+    <string name="cny_warning">You can send up to 31,000 CNY to individual recipient. But you can\'t send CNY to businesses. If you need to send money to a business in China, try sending USD instead.</string>
+    <string name="continue_transfer">Continue</string>
+    <string name="exchange_rate"><u>%1$s</u></string>
+    <string name="cny">CNY</string>
+    <string name="recipient_will_get_exactly">Recipient will get exactly</string>
+</resources>
