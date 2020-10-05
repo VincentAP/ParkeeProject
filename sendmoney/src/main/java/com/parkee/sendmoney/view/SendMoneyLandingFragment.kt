@@ -5,8 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.tabs.TabLayoutMediator
+import com.parkee.assets.extensions.fromJsonToList
 import com.parkee.assets.foundations.BaseFragment
 import com.parkee.assets.foundations.BaseFullScreenDialogFragment
+import com.parkee.assets.model.User
 import com.parkee.sendmoney.adapter.SendMoneyViewPagerAdapter
 import com.parkee.sendmoney.databinding.SendMoneyLandingFragmentBinding
 
@@ -15,6 +17,7 @@ class SendMoneyLandingFragment: BaseFullScreenDialogFragment() {
     private var binding: SendMoneyLandingFragmentBinding? = null
     private lateinit var fragmentList: MutableList<BaseFragment>
     private val tabTitle = listOf("International", "Same currency")
+    private val item by extraNotNull(ITEM, "{}")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -26,7 +29,7 @@ class SendMoneyLandingFragment: BaseFullScreenDialogFragment() {
         binding?.apply {
             layoutSendMoneyToolbar.imageClose.setOnClickListener { dismiss() }
             pagerSendMoney.adapter = activity?.let { act ->
-                SendMoneyViewPagerAdapter(act, fragmentList)
+                SendMoneyViewPagerAdapter(act, fragmentList, item)
             }
 
             TabLayoutMediator(tabSendMoney, pagerSendMoney) { tab, position ->
@@ -52,11 +55,13 @@ class SendMoneyLandingFragment: BaseFullScreenDialogFragment() {
     companion object {
         @JvmStatic
         val TAG: String = SendMoneyLandingFragment::class.java.name
+        private const val ITEM = "ITEM"
 
         @JvmStatic
-        fun newInstance() =
+        fun newInstance(item: String?) =
             SendMoneyLandingFragment().apply {
                 arguments = Bundle().apply {
+                    putString(ITEM, item)
                 }
             }
     }

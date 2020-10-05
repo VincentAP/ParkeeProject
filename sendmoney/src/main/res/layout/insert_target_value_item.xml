@@ -35,7 +35,7 @@
                 android:text="@string/recipient_gets"/>
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/editSourceValue"
+                android:id="@+id/editTargetValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tw_averta_regular"
@@ -65,7 +65,7 @@
         android:background="@drawable/currency_blue_bg">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textSourceCurrency"
+            android:id="@+id/textTargetCurrency"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17sp"

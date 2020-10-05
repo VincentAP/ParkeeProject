@@ -46,6 +46,7 @@ interface ApiService {
     )
     @POST("v1/quotes")
     fun getQuote(
-
-    ): Single<List<Quote>>
+        @Header("Authorization") authHeader: String,
+        @Body input: QuoteRaw
+    ): Single<Quote>
 }

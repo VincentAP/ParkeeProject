@@ -52,7 +52,7 @@
             android:background="@drawable/transfer_type_bg">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textSourceCurrency"
+                android:id="@+id/textSourceTransferTypeCurrency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tw_averta_bold"

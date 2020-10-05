@@ -5,12 +5,27 @@
     android:layout_width="match_parent"
     android:background="@color/transferWiseWhite"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <ScrollView android:id="@+id/scrollWrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearItemWrapper"
@@ -32,17 +47,34 @@
                 android:id="@+id/layoutInsertRecipientItem"
                 layout="@layout/insert_target_value_item"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textArrivedTime"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearTimeArrivalWrapper"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/tw_averta_semibold"
-                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:textColor="@color/transferWiseGrey"
-                android:text="@string/should_arrive"/>
+                android:layout_marginBottom="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textArrivedTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tw_averta_semibold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/transferWiseGrey"
+                    android:text="@string/should_arrive"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textArrivedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tw_averta_bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/transferWiseBlackBlue"
+                    tools:text="by October 5th"/>
+            </LinearLayout>
 
             <include
                 android:id="@+id/layoutCNYWarningItem"

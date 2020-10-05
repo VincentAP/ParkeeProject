@@ -30,13 +30,35 @@ data class Quote (
     @SerializedName("fee")
     var fee: Double,
     @SerializedName("allowedProfileTypes")
-    var allowedProfileTypes: List<ProfileType>,
+    var allowedProfileTypes: List<String>,
     @SerializedName("guaranteedTargetAmount")
     var guaranteedTargetAmount: Boolean,
     @SerializedName("ofSourceAmount")
     var ofSourceAmount: Boolean
 )
 
-data class ProfileType (
-    var type: String
+data class QuoteRaw(
+    val profile: String,
+    val source: String,
+    val target: String,
+    val rateType: String,
+    val sourceAmount: Double,
+    val type: String
+)
+
+data class QuoteResponseMapResult (
+    var sourceCurrency: String,
+    var targetCurrency: String,
+    var sourceAmount: String,
+    var targetAmount: String,
+    var type: String,
+    var subtractResult: String,
+    var exchangeRate: String,
+    var deliveryEstimate: String,
+    var fee: String
+)
+
+data class BalanceForSpecificCurrency(
+    val amount: Double,
+    val currency: String = "GBP"
 )

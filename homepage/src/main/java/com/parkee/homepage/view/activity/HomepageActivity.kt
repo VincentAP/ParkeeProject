@@ -137,7 +137,8 @@ class HomepageActivity: BaseActivity() {
 
             }
             SEND_FRAGMENT -> {
-                SendMoneyLandingFragment.newInstance()
+                val item = intent.getStringExtra("ITEM")
+                SendMoneyLandingFragment.newInstance(item)
                     .show(supportFragmentManager, SendMoneyLandingFragment.TAG)
             }
         }
