@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearExpandingSendMoneyItemWrapper"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transferWiseWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="23dp"
+        android:background="@color/transferWiseWhiteGrey"/>
+
+    <LinearLayout
+        android:id="@+id/linearItem1Wrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="11dp"
+        android:paddingEnd="0dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/minus_expand_item"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFeeValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tw_averta_bold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/transferWiseToolbarColor"
+            tools:text="12.93 GBP"/>
+
+        <LinearLayout
+            android:id="@+id/linearTransferTypeDropDownWrapper"
+            android:orientation="horizontal"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:paddingStart="0dp"
+            android:background="@drawable/transfer_type_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textSourceCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_bold"
+                android:textColor="@color/transferWiseToolbarColor"
+                tools:text="Balance transfer"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageArrowDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:srcCompat="@drawable/ic_arrow_down_blue"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/transferWiseGrey"
+            android:text="@string/fee"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="23dp"
+        android:background="@color/transferWiseWhiteGrey"/>
+
+    <LinearLayout
+        android:id="@+id/linearItem2Wrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/coordinatorRecipientNameWrapper"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/recipient_initial_bg">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textInitial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_bold"
+                android:textColor="@color/transferWiseBlackBlue"
+                android:layout_gravity="center"
+                tools:text="ws"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/linearCurrencyValueWrapper"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textYouSend2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="15dp"
+                android:textColor="@color/transferWiseGrey"
+                android:text="@string/you_send"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textFinalValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/transferWiseBlackBlue"
+                android:fontFamily="@font/tw_averta_regular"
+                android:textSize="20sp"
+                tools:text="1,000"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

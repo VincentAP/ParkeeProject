@@ -70,6 +70,7 @@ class LoginFragment: BaseFullScreenDialogFragment() {
 
         binding?.buttonLogin?.setOnClickListener {
             binding?.buttonLogin?.animateClicked()
+            binding?.progressIndicator?.visibility = View.VISIBLE
             if (binding?.editEmail?.text?.toString() == CREDENTIALS_EMAIL &&
                 binding?.editPassword?.text?.toString() == CREDENTIALS_PASSWORD) {
                 binding?.layoutCredentialsError?.root?.visibility = View.GONE
@@ -103,7 +104,6 @@ class LoginFragment: BaseFullScreenDialogFragment() {
                                 )
                             )
                         }
-                        progressIndicator.visibility = View.VISIBLE
                     }
                 }
                 Status.SUCCESS -> {

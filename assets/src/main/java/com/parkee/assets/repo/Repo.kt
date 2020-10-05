@@ -4,6 +4,7 @@ import com.parkee.assets.model.*
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
+import retrofit2.http.Field
 
 object Repo {
     internal var disposable: CompositeDisposable? = null
@@ -60,6 +61,30 @@ object Repo {
             .getRecipientAccountInfo(
                 Const.HEADER_ATTR,
                 accountId
+            )
+    }
+
+    fun getQuote(
+        profile: String,
+        source: String = "GBP",
+        target: String = "CNY",
+        rateType: String = "FIXED",
+        sourceAmount: Double,
+        type: String = "BALANCE_PAYOUT"
+    ): Single<Quote> {
+        val input = QuoteRaw(
+            profile,
+            source,
+            target,
+            rateType,
+            sourceAmount,
+            type
+        )
+        return AuthenticationInterceptor()
+            .getService(Const.BASE_URL)
+            .getQuote(
+                Const.HEADER_ATTR,
+                input
             )
     }
 }

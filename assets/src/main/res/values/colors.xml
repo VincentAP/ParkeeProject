@@ -25,4 +25,7 @@
     <color name="transferWiseAccountBlue">#28436c</color>
     <color name="transferWiseHistoryTitleGrey">#aeacac</color>
     <color name="transferWiseHistorySubtitleGrey">#a8aaac</color>
+    <color name="transferWiseSeekBarThumbBlue">#01014C</color>
+    <color name="transferWiseCNYBGOrange">#FFF7DD</color>
+    <color name="transferWiseCNYTextOrange">#DF8500</color>
 </resources>

@@ -68,4 +68,7 @@ dependencies {
 
     // shimmer
     api 'com.facebook.shimmer:shimmer:0.5.0'
+
+    // tooltip
+    api 'com.github.vihtarb:tooltip:0.1.9'
 }

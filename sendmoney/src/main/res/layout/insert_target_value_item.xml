@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relativeInsertCurrencyValueItemWrapper"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/insert_recipient_value_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeTextWrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/linearDropDownWrapper">
+
+        <LinearLayout
+            android:id="@+id/linearUpperItemWrapper"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:paddingTop="15dp"
+            android:paddingStart="15dp"
+            android:paddingEnd="0dp"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageLock">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textRecipientGets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_bold"
+                android:textColor="@color/transferWiseGrey61"
+                android:text="@string/recipient_gets"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editTargetValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/tw_averta_regular"
+                android:textSize="20sp"
+                android:background="@null"
+                android:textColor="@color/transferWiseBlack"
+                android:text="@string/source_value"/>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageLock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_lock_open"
+            android:layout_marginEnd="10dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDropDownWrapper"
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:background="@drawable/currency_blue_bg">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTargetCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:fontFamily="@font/tw_averta_bold"
+            android:textColor="@color/transferWiseWhite"
+            android:text="@string/cny"
+            android:layout_marginEnd="10dp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageArrowDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_down_blue"/>
+    </LinearLayout>
+</RelativeLayout>

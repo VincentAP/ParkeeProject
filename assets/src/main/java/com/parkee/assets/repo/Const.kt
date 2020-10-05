@@ -10,4 +10,5 @@ object Const {
     val DD_MMMM_YYYY_DATE_PATTERN = SimpleDateFormat("dd MMMM yyyy", Locale.ENGLISH)
     val YYYY_MM_DD_HH_MM_SS_DATE_PATTERN = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.ENGLISH)
     val DD_MMMM_YYYY_HH_MM_SS_DATE_PATTERN = SimpleDateFormat("dd MMMM yyyy HH:mm:ss", Locale.ENGLISH)
+    val MMMM_D_TH_DATE_PATTERN = SimpleDateFormat("MMMM d'th'", Locale.ENGLISH)
 }
