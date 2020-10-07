@@ -1,3 +1,4 @@
+include ':recipient'
 include ':homepage'
 include ':sendmoney'
 include ':login'
