@@ -26,12 +26,4 @@
             </selector>
         </scale>
     </item>
-<!--    <item>-->
-<!--        <shape>-->
-<!--            <gradient-->
-<!--                android:endColor="@color/transferWiseSeekBarThumbBlue"-->
-<!--                android:startColor="@color/transferWiseBlue"-->
-<!--                android:useLevel="true" />-->
-<!--        </shape>-->
-<!--    </item>-->
 </layer-list>

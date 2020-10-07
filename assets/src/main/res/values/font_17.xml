@@ -25,4 +25,8 @@
         <item name="android:textColor">@color/transferWiseLighterGrey</item>
     </style>
 
+    <style name="TextView17.AccountBlue" parent="TextView17">
+        <item name="android:textColor">@color/transferWiseAccountBlue</item>
+    </style>
+
 </resources>

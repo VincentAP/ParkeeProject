@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearRecipientDetailItemWrapper"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="25dp"
+    android:background="@drawable/edit_text_border_bg"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textInitial2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:textSize="17sp"
+        android:fontFamily="@font/tw_averta_bold"
+        android:textColor="@color/transferWiseAccountBlue"
+        tools:text="DH"/>
+
+    <LinearLayout
+        android:id="@+id/linearRecipientDetailWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRecName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseAccountBlue"
+            android:fontFamily="@font/tw_averta_bold"
+            tools:text="daniel hu"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRecEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseGrey61"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:visibility="gone"
+            tools:visibility="visible"
+            tools:text="email@gmail.com"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRecPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseGrey61"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:text="@string/alipay_id_chinese_mobile_number_or_email"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRecAttr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseAccountBlue"
+            android:fontFamily="@font/tw_averta_bold"
+            android:layout_marginBottom="40dp"
+            tools:text="email@gmail.com"/>
+    </LinearLayout>
+</LinearLayout>

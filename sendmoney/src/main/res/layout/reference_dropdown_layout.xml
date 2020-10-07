@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearLeftItemWrapper"
+    android:orientation="horizontal"
+    android:layout_width="90dp"
+    android:layout_height="52dp"
+    android:gravity="center"
+    android:background="@drawable/edit_text_border_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textEmo"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_face"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageArrow2"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:srcCompat="@drawable/ic_arrow_down_blue"/>
+</LinearLayout>

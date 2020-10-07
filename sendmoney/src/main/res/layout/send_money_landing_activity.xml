@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/frameSendMoneyLandingFragmentWrapper"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transferWiseWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearSendMoneyLandingFragmentWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transferWiseWhite">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarSendMoney"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transferWiseWhite"
+            app:contentInsetStartWithNavigation="0dp">
+
+            <include
+                android:id="@+id/layoutSendMoneyToolbar"
+                layout="@layout/send_money_toolbar" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <FrameLayout
+            android:id="@+id/frameContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearWrapper2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabSendMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:tabIndicatorColor="@color/transferWiseBlue"
+                    app:tabSelectedTextColor="@color/transferWiseBlue"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/pagerSendMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/frameFragmentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearBottomAttrWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabHelp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/transferWiseBlue"
+                android:src="@drawable/ic_help"
+                app:borderWidth="0dp"
+                app:fabSize="normal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="10dp"/>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonFinishAndPay"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:textColor="@color/transferWiseWhite"
+            android:gravity="center"
+            android:fontFamily="@font/tw_averta_regular"
+            android:text="@string/finish_and_pay"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:background="@color/transferWiseGreen"/>
+    </LinearLayout>
+</FrameLayout>

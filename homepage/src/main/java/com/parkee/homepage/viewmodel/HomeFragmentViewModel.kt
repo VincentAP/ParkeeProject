@@ -94,6 +94,7 @@ class HomeFragmentViewModelImpl: HomeFragmentViewModel, ViewModel() {
                 getTransferDeliveryTime(it)
             }, {
                 it.printStackTrace()
+                historyItem.postValue(Status.FAILED to listOf(FailedReloadItem()))
             }).addToDisposable()
     }
 
@@ -108,6 +109,7 @@ class HomeFragmentViewModelImpl: HomeFragmentViewModel, ViewModel() {
                         item.estimatedDeliveryDate = dt.estimatedDeliveryDate
                     }, {
                         it.printStackTrace()
+                        historyItem.postValue(Status.FAILED to listOf(FailedReloadItem()))
                     }).addToDisposable()
                 Observable.just(item)
             }
@@ -130,6 +132,7 @@ class HomeFragmentViewModelImpl: HomeFragmentViewModel, ViewModel() {
                         item.accountHolderName = an.accountHolderName
                     }, {
                         it.printStackTrace()
+                        historyItem.postValue(Status.FAILED to listOf(FailedReloadItem()))
                     }).addToDisposable()
                 Observable.just(item)
             }
@@ -146,7 +149,7 @@ class HomeFragmentViewModelImpl: HomeFragmentViewModel, ViewModel() {
                 }
             }, {
                 it.printStackTrace()
-                historyItem.postValue(Status.FAILED to null)
+                historyItem.postValue(Status.FAILED to listOf(FailedReloadItem()))
             }).addToDisposable()
     }
 

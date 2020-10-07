@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearTransferTypeItemWrapper"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selected_currency_bg"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearUpperAttrWrapper"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="15dp"
+        android:layout_marginBottom="7dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTransferType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/transferWiseWhite"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:layout_marginEnd="20dp"
+            tools:text="Balance transfer"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTransferFee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/transferWiseGrey61"
+            android:fontFamily="@font/tw_averta_semibold"
+            tools:text="0.60 GBP fee"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTransferMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="15sp"
+        android:textColor="@color/transferWiseGrey61"
+        android:fontFamily="@font/tw_averta_semibold"
+        tools:text="Send money from your GBP balance"/>
+</LinearLayout>

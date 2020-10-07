@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/relativeTransferTypeRadioItemWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="23dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/linearLeftAttrWrapper"
+        android:orientation="vertical"
+        android:layout_toStartOf="@+id/radioButton"
+        android:gravity="center_vertical"
+        android:paddingEnd="20dp"
+        android:paddingStart="0dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTransferTypeHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseAccountBlue"
+            android:fontFamily="@font/tw_averta_bold"
+            tools:text="Your balance"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTransferTypeLongText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseGrey61"
+            android:fontFamily="@font/tw_averta_semibold"
+            tools:text="Manually tranfer the money"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textNewToTransferWise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseGrey61"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:text="@string/should_arrive_in"/>
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatRadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:button="@null"
+        android:gravity="end"
+        android:layout_gravity="end"
+        android:drawableEnd="@drawable/radio_button_bg"
+        android:paddingStart="15dp"
+        android:paddingEnd="0dp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/transferWiseWhiteGrey"
+        android:layout_below="@+id/linearLeftAttrWrapper"/>
+</RelativeLayout>

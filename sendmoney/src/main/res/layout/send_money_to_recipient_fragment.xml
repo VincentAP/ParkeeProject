@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearSendToSomeoneElseFragmentWrapper"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:background="@color/transferWiseWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/relativeSendToSomeoneElseFragmentWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textSendToSomeone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/transferWiseAccountBlue"
+            android:fontFamily="@font/tw_averta_bold"
+            android:text="@string/send_to_someone_else"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/imageSomeoneClose"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageSomeoneClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_close"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/transferWiseWhiteGrey"/>
+
+    <ScrollView
+        android:id="@+id/scrollSendToSomeoneElseFragmentWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="25dp">
+
+        <LinearLayout
+            android:id="@+id/linearScrollWrapper"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textNewToTransferWise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/transferWiseGrey61"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:text="@string/their_email_optional"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/transferWiseBlackBlue"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:background="@drawable/edit_text_border_bg"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/transferWiseGrey61"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:text="@string/full_name_of_the_account_holder"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editFullName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/transferWiseBlackBlue"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:background="@drawable/edit_text_border_bg"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textBankDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/transferWiseAccountBlue"
+                android:fontFamily="@font/tw_averta_bold"
+                android:text="@string/bank_details"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/transferWiseWhiteGrey"/>
+
+            <LinearLayout
+                android:id="@+id/linearPaymentTypeWrapper"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="55dp"
+                android:baselineAligned="false">
+
+                <LinearLayout
+                    android:id="@+id/linearUnionPayWrapper"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textUnionPay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/transferWiseBlue"
+                        android:text="@string/unionpay_card"
+                        android:fontFamily="@font/tw_averta_bold"/>
+
+                    <View
+                        android:id="@+id/viewUnionPay"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/transferWiseBlue"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearAlipayWrapper"
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textAlipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17sp"
+                        android:textColor="@color/transferWiseAccountBlue"
+                        android:text="@string/alipay"
+                        android:fontFamily="@font/tw_averta_bold"/>
+
+                    <View
+                        android:id="@+id/viewAlipay"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/transferWiseBlue"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/transferWiseWhiteGrey"/>
+
+            <include
+                android:id="@+id/layoutAlipayMessage"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                layout="@layout/alipay_message_item"
+                android:layout_marginTop="25dp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <LinearLayout
+                android:id="@+id/linearPaymentNumberWrapper"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="30dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textPaymentType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/transferWiseGrey61"
+                    android:fontFamily="@font/tw_averta_semibold"
+                    android:text="@string/unionpay_card_number"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageHelpPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_pay_help"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editPaymentTypeNumber"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:textSize="17sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/transferWiseBlackBlue"
+                android:paddingStart="15dp"
+                android:paddingEnd="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:background="@drawable/edit_text_border_bg"/>
+
+            <RelativeLayout
+                android:id="@+id/relativeSendMoneyButtonWrapper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@color/transferWiseBlue">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/buttonConfirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:textColor="@color/transferWiseWhite"
+                    android:gravity="center"
+                    android:fontFamily="@font/tw_averta_regular"
+                    android:text="@string/confirm"
+                    android:textAllCaps="false"
+                    android:background="@android:color/transparent"/>
+
+                <ProgressBar
+                    android:id="@+id/progressIndicator"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:indeterminateDrawable="@drawable/custom_progress_bar"
+                    android:indeterminateDuration="500"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="90dp"
+                    android:visibility="gone"
+                    tools:visibility="visible"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -49,4 +49,63 @@ interface ApiService {
         @Header("Authorization") authHeader: String,
         @Body input: QuoteRaw
     ): Single<Quote>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v1/quotes")
+    fun getQuoteTargetAmount(
+        @Header("Authorization") authHeader: String,
+        @Body input: QuoteRawTargetAmount
+    ): Single<Quote>
+
+    @GET("v1/currency-pairs")
+    fun getAvailableCurrencyPairs(
+        @Header("Authorization") authHeader: String
+    ): Single<CurrencyPairs>
+
+    @GET("v1/accounts")
+    fun getAvailableRecipient(
+        @Header("Authorization") authHeader: String,
+        @Query("profile") profile: Int,
+        @Query("currency") currency: String
+    ): Single<List<RecipientAccountInfo>>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v1/accounts")
+    fun createRecipient(
+        @Header("Authorization") authHeader: String,
+        @Body input: RecipientCreated
+    ): Single<CreateRecipientResponse>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v1/accounts")
+    fun createRecipientByEmail(
+        @Header("Authorization") authHeader: String,
+        @Body input: RecipientCreatedByEmail
+    ): Single<RecipientAccountInfo>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v1/transfers")
+    fun createTransfer(
+        @Header("Authorization") authHeader: String,
+        @Body input: CreateTransferRequest
+    ): Single<TransferHistory>
+
+    @Headers(
+        "Content-Type: application/json"
+    )
+    @POST("v3/profiles/{profileId}/transfers/{transferId}/payments")
+    fun fundTransfer(
+        @Header("Authorization") authHeader: String,
+        @Path("profileId") profileId: Int,
+        @Path("transferId") transferId: Int,
+        @Body input: FundTransferTypeRequest
+    ): Single<FundTransferTypeResponse>
 }

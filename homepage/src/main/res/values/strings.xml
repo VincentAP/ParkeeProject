@@ -8,4 +8,6 @@
     <string name="currency_type">%1$s balance</string>
     <string name="empty_history_message">This is where you\'ll see your activity and transactions.</string>
     <string name="of">of</string>
+    <string name="failed_to_load_data_please_reload">Failed to load Data. Please reload</string>
+    <string name="reload">reload</string>
 </resources>

@@ -28,4 +28,7 @@
     <color name="transferWiseSeekBarThumbBlue">#01014C</color>
     <color name="transferWiseCNYBGOrange">#FFF7DD</color>
     <color name="transferWiseCNYTextOrange">#DF8500</color>
+    <color name="transferWiseAlipayMessage">#875000</color>
+    <color name="transferWiseCardBG">#EFF0F1</color>
+    <color name="transferWiseDropDownBG">#EFEFEF</color>
 </resources>

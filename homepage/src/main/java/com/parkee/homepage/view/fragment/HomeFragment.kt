@@ -37,7 +37,8 @@ class HomeFragment : BaseFragment() {
             TransferHistoryViewHolderFactory(),
             HeaderSectionViewHolderFactory(),
             TransferHistoryShimmerViewHolderFactory(),
-            TransferHistoryTotalViewHolderFactory()
+            TransferHistoryTotalViewHolderFactory(),
+            FailedReloadViewHolderFactory()
         )
     )
 
@@ -62,6 +63,7 @@ class HomeFragment : BaseFragment() {
         }
 
         setupHomeFragmentViewModel()
+        refreshPage()
         return binding?.root
     }
 
@@ -92,15 +94,16 @@ class HomeFragment : BaseFragment() {
     }
 
     private fun setOnClickHistory(item: BaseItem, view: View) {
-
+        when(item) {
+            is FailedReloadItem -> refreshPage()
+        }
     }
 
     private fun setOnClickBalance(item: BaseItem, view: View) {
 
     }
 
-    override fun onResume() {
-        super.onResume()
+    private fun refreshPage() {
         val itemList = item.fromJsonToList<User>()
         itemList?.get(0)?.id?.let {
             homeFragmentViewModel.setAccountBalance(it)

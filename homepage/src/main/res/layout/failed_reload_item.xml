@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/linearFailedReloadItemWrapper"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textExplanation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:textSize="20sp"
+        android:fontFamily="@font/tw_averta_bold"
+        android:textColor="@color/transferWiseBlue"
+        android:text="@string/failed_to_load_data_please_reload"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:fontFamily="@font/tw_averta_bold"
+        android:textColor="@color/transferWiseWhite"
+        android:background="@color/transferWiseBlue"
+        android:text="@string/reload"/>
+</LinearLayout>

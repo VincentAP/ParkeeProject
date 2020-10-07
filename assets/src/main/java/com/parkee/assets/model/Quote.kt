@@ -46,7 +46,17 @@ data class QuoteRaw(
     val type: String
 )
 
+data class QuoteRawTargetAmount(
+    val profile: String,
+    val source: String,
+    val target: String,
+    val rateType: String,
+    val targetAmount: Double,
+    val type: String
+)
+
 data class QuoteResponseMapResult (
+    var id: Int,
     var sourceCurrency: String,
     var targetCurrency: String,
     var sourceAmount: String,

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearDropDownItemWrapper"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/transferWiseDropDownBG"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageCheckDropDown"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="5dp"
+        app:srcCompat="@drawable/ic_dropdown_check"/>
+
+    <TextView
+        android:id="@+id/textSpinnerCurrentSelectedReason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dropdown_item_bg"
+        android:fontFamily="@font/tw_averta_semibold"
+        android:gravity="center_vertical"
+        android:paddingStart="5dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="0dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/transferWiseBlack"
+        android:textSize="15sp"
+        tools:text="July 2020" />
+</LinearLayout>
