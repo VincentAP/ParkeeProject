@@ -8,24 +8,30 @@ import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatSeekBar
 import androidx.core.text.HtmlCompat
 import androidx.lifecycle.Observer
-import com.parkee.assets.extensions.fromJsonToList
-import com.parkee.assets.extensions.toCurrencyFormat
+import com.parkee.assets.extensions.*
 import com.parkee.assets.foundations.BaseFragment
-import com.parkee.assets.model.Quote
 import com.parkee.assets.model.User
 import com.parkee.assets.repo.Status
 import com.parkee.sendmoney.R
 import com.parkee.sendmoney.databinding.SendMoneyInternationalFragmentBinding
-import com.parkee.sendmoney.viewmodel.SendMoneyInternationalViewModelImpl
+import com.parkee.sendmoney.viewmodel.SendMoneyViewModelImpl
 
 class SendMoneyInternationalFragment: BaseFragment() {
 
     private var binding: SendMoneyInternationalFragmentBinding? = null
-    private lateinit var sendMoneyInternationalViewModel: SendMoneyInternationalViewModelImpl
+    private lateinit var sendMoneyViewModel: SendMoneyViewModelImpl
+    private var onSendMoneyInternationalListener: OnSendMoneyInternationalListener? = null
     private val item by extraNotNull(ITEM, "{}")
     private var currentSourceAmount = 1000.toDouble()
+    private var feeItem: String? = null
+    private var currencyItem: String? = null
+
+    fun setOnSendMoneyInternationalListener(onSendMoneyInternationalListener: OnSendMoneyInternationalListener) = apply {
+        this.onSendMoneyInternationalListener = onSendMoneyInternationalListener
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -71,13 +77,59 @@ class SendMoneyInternationalFragment: BaseFragment() {
                 ) {}
             })
         }
+
+        binding?.layoutInsertSourceItem?.linearDropDownWrapper?.setOnClickListener {
+            navigate(binding?.layoutInsertSourceItem?.textSourceCurrency?.text?.toString())
+        }
+
+        binding?.layoutInsertRecipientItem?.linearDropDownWrapper?.setOnClickListener {
+            navigate(binding?.layoutInsertRecipientItem?.textTargetCurrency?.text?.toString())
+        }
+
+        binding?.layoutExpanding?.linearTransferTypeDropDownWrapper?.setOnClickListener {
+            activity?.supportFragmentManager?.let {
+                TransferTypeFragment.newInstance(
+                    feeItem,
+                    currencyItem
+                )
+                    .setOnTransferTypeClicked(object : TransferTypeFragment.OnTransferTypeClicked {
+                        override fun onTransferTypeClicked(type: String) {
+                            binding?.layoutExpanding?.textSourceTransferTypeCurrency?.text = type
+                        }
+                    })
+                    .show(it, TransferTypeFragment.TAG)
+            }
+        }
+
+        binding?.buttonContinue?.setOnClickListener {
+            onSendMoneyInternationalListener?.onSendMoneyInternationalListener(
+                item,
+                sendMoneyViewModel.getQuoteResponseMapResult().toJson()
+            )
+        }
+
         setupSendMoneyInternationalViewModel()
         return binding?.root
     }
 
+    private fun navigate(item: String?) {
+        activity?.supportFragmentManager?.let {
+            AvailableCurrencyFragment.newInstance(item)
+                .setOnListenerUSD(object : AvailableCurrencyFragment.Listener {
+                    override fun listener() {
+                        binding?.apply {
+                            layoutCNYWarningItem.root.visibility = View.GONE
+                            textUSDMessage.visibility = View.VISIBLE
+                        }
+                    }
+                })
+                .show(it, AvailableCurrencyFragment.TAG)
+        }
+    }
+
     private fun setupSendMoneyInternationalViewModel() {
-        sendMoneyInternationalViewModel = SendMoneyInternationalViewModelImpl()
-        sendMoneyInternationalViewModel.getQuote().observe(this, Observer { (status, item) ->
+        sendMoneyViewModel = SendMoneyViewModelImpl()
+        sendMoneyViewModel.getQuote().observe(this, Observer { (status, item) ->
             when(status) {
                 Status.ON_PROGRESS -> {
                     binding?.coordinatorProgressBar?.visibility = View.VISIBLE
@@ -86,6 +138,8 @@ class SendMoneyInternationalFragment: BaseFragment() {
                     binding?.apply {
                         coordinatorProgressBar.visibility = View.GONE
                         scrollWrapper.visibility = View.VISIBLE
+                        feeItem = item?.fee
+                        currencyItem = item?.sourceCurrency
 
                         layoutInsertSourceItem.apply {
                             textSourceCurrency.text = item?.sourceCurrency
@@ -107,7 +161,7 @@ class SendMoneyInternationalFragment: BaseFragment() {
             }
         })
 
-        sendMoneyInternationalViewModel.getAccountBalance().observe(this, Observer {
+        sendMoneyViewModel.getAccountBalance().observe(this, Observer {
             val amount = "${(it.amount - currentSourceAmount).toCurrencyFormat()} GBP"
             binding?.layoutInsertSourceItem?.textCurrentBalance?.text =
                 HtmlCompat.fromHtml(
@@ -120,8 +174,8 @@ class SendMoneyInternationalFragment: BaseFragment() {
     private fun refreshPage(sourceAmount: Double) {
         val itemList = item.fromJsonToList<User>()
         itemList?.get(0)?.id?.let {
-            sendMoneyInternationalViewModel.setQuote(it, sourceAmount)
-            sendMoneyInternationalViewModel.setAccountBalance(it)
+            sendMoneyViewModel.setQuote(it, sourceAmount)
+            sendMoneyViewModel.setAccountBalance(it)
         }
     }
 
@@ -135,17 +189,29 @@ class SendMoneyInternationalFragment: BaseFragment() {
         binding = null
     }
 
+    fun setSeekBarReversed(currentProgress: Int, seekBar: AppCompatSeekBar) {
+        seekBar.animateReverse(currentProgress, 0)
+    }
+
+    interface OnSendMoneyInternationalListener {
+        fun onSendMoneyInternationalListener(
+            item: String,
+            quoteItem: String?
+        )
+    }
+
     companion object {
         @JvmStatic
         val TAG: String = SendMoneyInternationalFragment::class.java.name
         private const val ITEM = "ITEM"
 
         @JvmStatic
-        fun newInstance(item: String?) =
-            SendMoneyInternationalFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ITEM, item)
-                }
+        fun newInstance(
+            item: String?
+        ) = SendMoneyInternationalFragment().apply {
+            arguments = Bundle().apply {
+                putString(ITEM, item)
             }
+        }
     }
 }

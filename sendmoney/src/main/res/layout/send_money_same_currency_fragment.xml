@@ -4,12 +4,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <ScrollView android:id="@+id/scrollWrapper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <LinearLayout
             android:id="@+id/linearItemWrapper"
@@ -20,51 +35,70 @@
             android:paddingEnd="10dp">
 
             <include
-                android:id="@+id/layoutInsertSourceItem"
+                android:id="@+id/layoutInsertTargetItem"
                 layout="@layout/insert_money_same_currency_item"/>
 
             <include
                 android:id="@+id/layoutExpanding"
                 layout="@layout/expanding_send_money_same_currency_item"/>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textArrivedTime"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:id="@+id/linearTimeArrivalWrapper"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/tw_averta_semibold"
-                android:layout_gravity="center_vertical"
+                android:orientation="horizontal"
                 android:layout_marginEnd="15dp"
                 android:layout_marginTop="15dp"
-                android:textColor="@color/transferWiseGrey"
-                android:text="@string/should_arrive"/>
+                android:layout_marginBottom="15dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textArrivedTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tw_averta_semibold"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:textColor="@color/transferWiseGrey"
+                    android:text="@string/should_arrive"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textArrivedTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/tw_averta_bold"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/transferWiseBlackBlue"
+                    tools:text="by October 5th"/>
+            </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonContinue"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:textAllCaps="false"
+                android:enabled="false"
                 android:gravity="center"
                 android:layout_marginTop="15dp"
                 android:background="@color/transferWiseGreen"
                 android:textColor="@color/transferWiseWhite"
                 android:text="@string/continue_transfer"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textCNYWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@drawable/cny_warning_bg"
+                android:lineSpacingMultiplier="1.5"
+                android:textSize="15sp"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:textColor="@color/transferWiseCNYTextOrange"
+                android:text="@string/this_feature_not_available_right_now"/>
         </LinearLayout>
     </ScrollView>
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end|bottom">
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fabHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/transferWiseBlue"
-            android:src="@drawable/ic_help"
-            app:borderWidth="0dp"
-            app:fabSize="normal"
-            android:layout_marginBottom="10dp"
-            android:layout_marginEnd="10dp"/>
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </FrameLayout>

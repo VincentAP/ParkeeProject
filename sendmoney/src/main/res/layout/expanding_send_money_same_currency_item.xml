@@ -43,7 +43,7 @@
         <LinearLayout
             android:id="@+id/linearTransferTypeDropDownWrapper"
             android:orientation="horizontal"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_marginEnd="15dp"
             android:layout_gravity="center_vertical"
@@ -52,7 +52,7 @@
             android:background="@drawable/transfer_type_bg">
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/textSourceCurrency"
+                android:id="@+id/textTargetTransferTypeCurrency"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tw_averta_bold"

@@ -75,7 +75,10 @@ class LoginFragment: BaseFullScreenDialogFragment() {
                 binding?.editPassword?.text?.toString() == CREDENTIALS_PASSWORD) {
                 binding?.layoutCredentialsError?.root?.visibility = View.GONE
                 loginViewModel.requestLogin()
-            } else binding?.layoutCredentialsError?.root?.visibility = View.VISIBLE
+            } else {
+                binding?.layoutCredentialsError?.root?.visibility = View.VISIBLE
+                binding?.progressIndicator?.visibility = View.GONE
+            }
         }
 
         binding?.layoutCredentialsError?.imageClose?.setOnClickListener {

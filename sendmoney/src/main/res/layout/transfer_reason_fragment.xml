@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/frameCreateRecipientWrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transferWiseWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ScrollView
+        android:id="@+id/scrollCreateRecipientWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transferWiseWhite">
+
+        <LinearLayout
+            android:id="@+id/linearCreateRecipientWrapper"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textSuggested"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:fontFamily="@font/tw_averta_bold"
+                android:textColor="@color/transferWiseAccountBlue"
+                android:text="@string/transfer_reason"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textExplanation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="45dp"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/transferWiseGrey61"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:text="@string/transfer_reason_explanation"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textCurrency1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/transferWiseGrey61"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:text="@string/currency"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinnerTransferReasonDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginBottom="27dp"
+                android:background="@color/transferWiseWhite"
+                android:dropDownVerticalOffset="35dp"
+                android:popupBackground="@drawable/dropdown_item_bg" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonContinueReason"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:textColor="@color/transferWiseWhite"
+                android:gravity="center"
+                android:fontFamily="@font/tw_averta_regular"
+                android:text="@string/continue_transfer"
+                android:textAllCaps="false"
+                android:background="@color/transferWiseBlue"/>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

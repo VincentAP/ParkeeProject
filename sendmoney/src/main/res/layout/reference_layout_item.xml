@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearReferenceItemWrapper"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="52dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/edit_text_border_bg">
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/spinnerTransferReasonDropDown"
+        android:layout_width="90dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="27dp"
+        android:background="@color/transferWiseWhite"
+        android:dropDownVerticalOffset="35dp"
+        android:popupBackground="@drawable/reference_dropdown_bg" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editReferences"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/tw_averta_regular"
+        android:textSize="15sp"
+        android:hint="@string/reference_message"/>
+</LinearLayout>

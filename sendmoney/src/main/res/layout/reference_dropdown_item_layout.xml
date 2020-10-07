@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/linearDropDownItemWrapper"
+    android:orientation="vertical"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@color/transferWiseWhite"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSuggestion"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="23dp"
+        android:textSize="17sp"
+        android:textColor="@color/transferWiseGrey61"
+        android:fontFamily="@font/tw_averta_bold"
+        android:text="@string/suggestions"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <LinearLayout
+        android:id="@+id/linearFirstWrapper"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp"
+        android:layout_width="280dp"
+        android:layout_marginBottom="25dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageCheckDropDown"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_marginStart="5dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/ic_dropdown_check"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textEmo"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/transferWiseAccountBlue"
+            android:fontFamily="@font/tw_averta_semibold"
+            tools:text="Family" />
+    </LinearLayout>
+</LinearLayout>

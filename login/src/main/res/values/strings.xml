@@ -12,9 +12,7 @@
     <string name="terms_policy">By continuing you accept our <![CDATA[<a href="https://api-docs.transferwise.com/">Terms of use</a>]]> and <![CDATA[<a href="https://api-docs.transferwise.com/">Privacy Policy</a>]]></string>
     <string name="we_just_sent_you_an_sms">We just sent you an SMS</string>
     <string name="verification_message">To log in, enter the security code we sent to</string>
-    <string name="learn_more"><u>Learn more</u></string>
     <string name="type_digit">Type your 6-digit security code here:</string>
-    <string name="done">Done</string>
     <string name="did_not_receive_code"><u>I didn\'t receive a code</u></string>
     <string name="credentials_error">Sorry, that email or password didn\'t work.</string>
 </resources>

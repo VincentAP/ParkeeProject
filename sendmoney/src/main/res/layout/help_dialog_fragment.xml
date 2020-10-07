@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/relative1HelpWrapper"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transferWiseWhiteGrey"
+    android:paddingBottom="25dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/relativeHelpWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:background="@color/transferWiseAccountBlue">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textMembership"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseWhite"
+            android:textSize="13sp"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:text="@string/membership"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/transferWiseWhite"
+            android:textSize="25sp"
+            android:fontFamily="@font/tw_averta_semibold"
+            android:text="@string/hello"
+            android:layout_below="@+id/textMembership"
+            android:layout_marginTop="15dp"
+            android:layout_above="@+id/linearSearchWrapper"/>
+
+        <LinearLayout
+            android:id="@+id/linearSearchWrapper"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:background="@color/transferWiseWhite">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_search"
+                android:layout_marginEnd="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/editSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/transferWiseGrey61"
+                android:fontFamily="@font/tw_averta_semibold"
+                android:background="@null"
+                android:hint="@string/how_can_we_help"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textSuggested"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeHelpWrapper"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/tw_averta_bold"
+        android:textColor="@color/transferWiseAccountBlue"
+        android:text="@string/suggested_articles"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBrowseTopic"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textAllCaps="false"
+        android:text="@string/browse_topics"
+        android:gravity="center"
+        android:textColor="@color/transferWiseBlue"
+        android:fontFamily="@font/tw_averta_bold"
+        android:textSize="15sp"
+        android:background="@drawable/browse_topic_button_bg"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"/>
+</RelativeLayout>

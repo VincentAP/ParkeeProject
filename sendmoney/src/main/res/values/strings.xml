@@ -14,4 +14,53 @@
     <string name="exchange_rate"><u>%1$s</u></string>
     <string name="cny">CNY</string>
     <string name="recipient_will_get_exactly">Recipient will get exactly</string>
+    <string name="search_hint">Type a currency / country</string>
+    <string name="usd_message">We can only send US dollars directly to your recipient\'s bank account. For Further Credit instructions can\'t be included. <u><font fgcolor="#09bcfa">See why here</font></u></string>
+    <string name="membership">Membership number: P5506671</string>
+    <string name="hello">Hello.</string>
+    <string name="suggested_articles">Suggested articles:</string>
+    <string name="browse_topics">Browse topics</string>
+    <string name="how_can_we_help">How can we help?</string>
+    <string name="who_are_you_sending_money_to">Who are you sending money to?</string>
+    <string name="send_another_way"><u><font fgcolor="#09bcfa">Transfer Wise sends money to bank accounts. Looking to send money another way?</font></u></string>
+    <string name="send_to_someone_else">Send to someone else</string>
+    <string name="their_email_optional">Their email (optional)</string>
+    <string name="full_name_of_the_account_holder">Full name of the account holder</string>
+    <string name="bank_details">Bank details</string>
+    <string name="unionpay_card">UnionPay card</string>
+    <string name="alipay">Alipay</string>
+    <string name="unionpay_card_number">UnionPay card number</string>
+    <string name="confirm">Confirm</string>
+    <string name="ali_pay_message">Alipay recipients may need to link bank cards to their wallets to receive your money. Please inform your recipient to look out for push notification and SMS from Alipay and complete required setup.</string>
+    <string name="alipay_id_chinese_mobile_number_or_email">Alipay ID (Chinese mobile number or email)</string>
+    <string name="transfer_reason">What\'s the reason for your transfer?</string>
+    <string name="transfer_reason_explanation">To help us keep TransferWise safe and secure, please let us know why you\'re making this transfer.</string>
+    <string name="currency">Currency</string>
+    <string name="select_a_reason">Select a reason...</string>
+    <string name="review_details_of_your_transfer">Review details of your transfer</string>
+    <string name="transfer_details">Transfer details</string>
+    <string name="edit_review"><u>Edit</u></string>
+    <string name="total_fees_included">Total fees (included)</string>
+    <string name="amount_we_ll_convert">Amount we\'ll convert</string>
+    <string name="guaranteed_rate_24_hours"><u><font fgcolor="#09bcfa">Guaranteed rate (24 hours)</font></u></string>
+    <string name="person_gets">%1$s gets</string>
+    <string name="name">Name</string>
+    <string name="recipient_details">Recipient details</string>
+    <string name="change"><u>Change</u></string>
+    <string name="email">Email</string>
+    <string name="references_for">References for %1$s</string>
+    <string name="reference_message">Message to %1$s (only sent by email)</string>
+    <string name="confirm_and_continue">Confirm and continue</string>
+    <string name="suggestions">Suggestions</string>
+    <string name="guaranteed_tooltip"><b><font fgcolor="#9c9c9c">Guaranteed rate</font></b>\nFor this transfer, you\'ll get this rate as long as we receive your %1$s within the next 24 hours. <Data><![CDATA[<u><font color=\'#09bcfa\'>Learn more</font></u>]]></Data></string>
+    <string name="transfer_type_fee">- %1$s in total fees</string>
+    <string name="should_arrive_in">Should arrive %1$s.</string>
+    <string name="choose_your_transfer_type">Choose your transfer type</string>
+    <string name="cancel_transfer">Cancel transfer</string>
+    <string name="finish_and_pay">Finish and pay</string>
+    <string name="enter_your_password_to_approve_this_transfer">Enter your password to approve this transfer</string>
+    <string name="this_security_check_is_to_keep_your_account_safe">this security check is to keep your account safe</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="forgot_your_password"><u>Forgot your password?</u></string>
+    <string name="this_feature_not_available_right_now">This feature is not available right now</string>
 </resources>

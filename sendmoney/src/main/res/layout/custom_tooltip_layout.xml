@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearCustomTooltipWrapper"
+    android:orientation="vertical"
+    android:layout_width="230dp"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:rotation="180"
+    android:background="@drawable/tooltip_upper_arrow"
+    android:gravity="center"
+    android:elevation="10dp"
+    android:paddingBottom="5dp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textTooltip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:lineSpacingMultiplier="1.5"
+        android:rotation="180"
+        android:fontFamily="@font/tw_averta_semibold"
+        android:text="@string/guaranteed_tooltip"/>
+</LinearLayout>

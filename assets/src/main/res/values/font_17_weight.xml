@@ -61,4 +61,16 @@
         <item name="android:fontFamily">@font/tw_averta_bold</item>
     </style>
 
+    <style name="TextView17.AccountBlue.Regular" parent="TextView17.AccountBlue">
+        <item name="android:fontFamily">@font/tw_averta_regular</item>
+    </style>
+
+    <style name="TextView17.AccountBlue.SemiBold" parent="TextView17.AccountBlue">
+        <item name="android:fontFamily">@font/tw_averta_semibold</item>
+    </style>
+
+    <style name="TextView17.AccountBlue.Bold" parent="TextView17.AccountBlue">
+        <item name="android:fontFamily">@font/tw_averta_bold</item>
+    </style>
+
 </resources>

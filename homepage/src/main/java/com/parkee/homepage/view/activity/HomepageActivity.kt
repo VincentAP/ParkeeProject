@@ -1,7 +1,6 @@
 package com.parkee.homepage.view.activity
 
 import android.content.Intent
-import android.graphics.Color
 import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.core.content.ContextCompat
@@ -9,7 +8,7 @@ import com.parkee.assets.foundations.BaseActivity
 import com.parkee.homepage.R
 import com.parkee.homepage.databinding.HomepageActivityBinding
 import com.parkee.homepage.navigator.HomepageNavigator
-import com.parkee.sendmoney.view.SendMoneyLandingFragment
+import com.parkee.sendmoney.view.SendMoneyLandingActivity
 import kotlinx.android.synthetic.main.homepage_activity.*
 
 class HomepageActivity: BaseActivity() {
@@ -138,8 +137,10 @@ class HomepageActivity: BaseActivity() {
             }
             SEND_FRAGMENT -> {
                 val item = intent.getStringExtra("ITEM")
-                SendMoneyLandingFragment.newInstance(item)
-                    .show(supportFragmentManager, SendMoneyLandingFragment.TAG)
+                Intent(this, SendMoneyLandingActivity::class.java).also {
+                    it.putExtra("ITEM", item)
+                    startActivity(it)
+                }
             }
         }
     }
